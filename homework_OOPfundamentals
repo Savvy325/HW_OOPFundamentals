@@ -1,0 +1,56 @@
+# 1. City Infrastructure Management System
+
+# Task 1: Vehicle Registration System
+class Vehicle:
+    def __init__(self, reg_num, model, owner):
+        self.reg_numb = reg_num
+        self.model = model
+        self.owner = owner
+
+    def update_owner(self):
+        user_input = input('\nWho would you like to change ownership to? : ')
+        self.owner = user_input
+
+nissan = Vehicle(123, 'maxima', 'savvy')
+ford = Vehicle(1243, 'mustang', 'chris')
+
+nissan.update_owner()
+print(f'The new owner of the {nissan.model} is {nissan.owner}')
+
+
+ford.update_owner()
+print(f'The new owner of the {ford.model} is {ford.owner}')
+
+
+# Task 2: Event Management System Enhancement
+name = input('What is the name of the new participant? : ')
+date = input('\nWhat date is the new partcipant attending? : (MM/DD/YYYY) ')
+
+self.participants = {}
+
+class Event:
+    
+    def __init__(self, name, date):
+        self.name = name
+        self.date = date
+        self.participants = {}
+        self.participant_count = 0
+
+
+    def add_participant(self):
+        # self.name = name
+        # self.date = date
+        
+        name = input('What is the name of the new participant? : ')
+        date = input('\nWhat date is the new partcipant attending? : (MM/DD/YYYY) ')
+        self.participants[name] = date
+        self.participant_count += 1
+
+participant = Event('hotdog convention', '07/15/2024')
+
+participant.add_participant()
+participant.add_participant()
+participant.add_participant()
+
+print(participant.participants)
+print(participant.participant_count)
